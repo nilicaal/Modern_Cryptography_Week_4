@@ -32,12 +32,14 @@ def main():
 
         We proceeded as follows:
         - This string's tag can then be found by xor'ing the result
-        from the first tag we found with the data in the second range
-        of the data.
+          from the first tag we found with the data in the second range
+          of the data.
         - The third range of the data just gets appended to the xor'd data.
-        -
-
+        - We find the new tag for the newly acquired data.
+        - We try to verify the newly found data. This succeeds for the data
+          we provided it by default.
     """
+
     data = get_data()
     len_message = 32 # Length of the small message from which we forge a tag.
 
